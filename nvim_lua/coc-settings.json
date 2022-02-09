@@ -1,0 +1,28 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "javascript",
+    "javascriptreact",
+    "html",
+    "json",
+    "typescript",
+    "typescriptreact",
+    "scss",
+    "python"
+  ],
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "python.pythonPath": "/usr/local/opt/python@3.7/bin/python3",
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "black",
+  "prettier.tslintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "git.addGBlameToVirtualText": true
+}

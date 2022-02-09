@@ -31,7 +31,7 @@ call plug#begin('~/.vim/plugged')
     "Plug 'joshdick/onedark.vim'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'jremmen/vim-ripgrep'
+    " Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'vim-airline/vim-airline'
@@ -43,7 +43,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'frazrepo/vim-rainbow'
     "Plug 'kchmck/vim-coffee-script'
-    " Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/plenary.nvim'
     Plug 'sindrets/diffview.nvim'
 
 call plug#end()
@@ -280,3 +280,7 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+"Git diff view
+nnoremap do <ESC>:DiffviewOpen<CR>
+nnoremap dc <ESC>:DiffviewClose<CR>

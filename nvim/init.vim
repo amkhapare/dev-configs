@@ -16,6 +16,11 @@ set backspace=indent,eol,start
 set path+=**
 set wildignore+=**/node_modules/**
 set updatetime=100
+set nohlsearch
+set scrolloff=8
+let g:netrw_preview   = 1
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 30
 
 set colorcolumn=80
 highlight colorColumn ctermbg=0 guibg=lightgrey
@@ -65,14 +70,6 @@ let mapleader = " "
 
 inoremap jj <ESC>
 
-" ONE DARK COLOR SCHEME
-"autocmd vimenter * colorscheme onedark
-"set background=dark
-"let g:lightline = {
-"  \ 'colorscheme': 'onedark',
-"  \ }
-
-
 autocmd vimenter * colorscheme gruvbox
 set background=dark
 
@@ -114,7 +111,7 @@ let g:coc_global_extensions = [
     \'coc-snippets',
     \'coc-go',
     \'coc-git',
-    \'coc-angular'
+    \'coc-angular',
     \]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -284,3 +281,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "Git diff view
 nnoremap do <ESC>:DiffviewOpen<CR>
 nnoremap dc <ESC>:DiffviewClose<CR>
+
+" My custom bindings
+nnoremap <C-e> <ESC>:Lex <bar> vertical resize 40<CR>

@@ -24,5 +24,7 @@
   "python.formatting.provider": "black",
   "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": true,
-  "git.addGBlameToVirtualText": true
+  "git.addGBlameToVirtualText": true,
+  "emmet.priority": 1,
+  "emmet.showExpandedAbbreviation": "always"
 }

@@ -17,10 +17,13 @@ set path+=**
 set wildignore+=**/node_modules/**
 set updatetime=100
 set nohlsearch
-set scrolloff=8
+set scrolloff=10
 let g:netrw_preview   = 1
 let g:netrw_liststyle = 3
 let g:netrw_winsize   = 30
+
+" Enable true color nvim
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 set colorcolumn=80
 highlight colorColumn ctermbg=0 guibg=lightgrey
@@ -33,10 +36,8 @@ set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 
-    "Plug 'joshdick/onedark.vim'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'vim-airline/vim-airline'
@@ -47,12 +48,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'tomtom/tcomment_vim'
     Plug 'honza/vim-snippets'
     Plug 'frazrepo/vim-rainbow'
-    "Plug 'kchmck/vim-coffee-script'
+    Plug 'kchmck/vim-coffee-script'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'sindrets/diffview.nvim'
 
 call plug#end()
 
+"Disable arrow keys
 nnoremap <Up> <Nop>
 inoremap <Up> <Nop>
 nnoremap <Down> <Nop>
@@ -90,12 +92,14 @@ nnoremap ff <ESC>:Rg
 
 " rainbow brackets
 let g:rainbow_active = 1
-let g:rainbow_load_separately = [
-            \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-            \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-            \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-            \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-            \ ]
+" let g:rainbow_load_separately = [
+"             \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+"             \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+"             \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+"             \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+"             \ ]
+
+" au FileType ts,js call rainbow#load()
 
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']

@@ -25,6 +25,6 @@
   "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": true,
   "git.addGBlameToVirtualText": true,
-  "emmet.priority": 1,
-  "emmet.showExpandedAbbreviation": "always"
+  "emmet.priority": 91,
+  "snippets.priority": 90
 }

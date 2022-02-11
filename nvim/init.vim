@@ -112,6 +112,7 @@ let g:coc_global_extensions = [
     \'coc-go',
     \'coc-git',
     \'coc-angular',
+    \'coc-emmet'
     \]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')

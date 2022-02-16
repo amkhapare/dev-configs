@@ -10,3 +10,7 @@
 
 
 6. Run *:checkhealth* and fix diagnostics outputs.
+
+
+#For any error check file
+** ~/.cache/nvim/packer.nvim.log **

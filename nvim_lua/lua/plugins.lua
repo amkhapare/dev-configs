@@ -18,18 +18,19 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 ]]--
 
---[[ Plug lua config
+--Plug lua config
 
-local Plug = vim.fn['plug#']
-vim.call('plug#begin', '~/.config/nvim/plugged')
+-- local Plug = vim.fn['plug#']
+-- vim.call('plug#begin', '~/.config/nvim/plugged')
+-- 
+--     Plug 'morhetz/gruvbox'
+-- 
+-- vim.call('plug#end')
 
+--
 
+-- Packer config
 
-vim.call('plug#end')
-
-]]--
-
--- Packer: automatic bootstrap
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -38,18 +39,14 @@ end
 
 return require('packer').startup(function(use)
   -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+    
+    use 'wbthomason/packer.nvim' -- Packer can manage itself 
+    use 'ellisonleao/gruvbox.nvim' -- gruvbox color scheme
+    use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
 
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-
-    -- gruvbox color scheme
-    use "ellisonleao/gruvbox.nvim"
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)

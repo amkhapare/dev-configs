@@ -20,14 +20,18 @@ vim.o.scrolloff=10
 --vim.o.g:netrw_preview   = 1
 --vim.o.g:netrw_liststyle = 3
 --vim.o.g:netrw_winsize   = 30
+vim.o.termguicolors = true
+vim.o.background = "dark" -- or "light" for light mode
 
+--Setup with Plug
+-- vim.cmd([[colorscheme gruvbox]])
 
 
 packer = require('plugins')
 packer.startup(function(use)
 	--All configurations go here
 	
-	vim.opt.termguicolors = true
-	vim.o.background = "dark" -- or "light" for light mode
 	vim.cmd([[colorscheme gruvbox]])
 end)
+
+require'lspconfig'.pyright.setup{}

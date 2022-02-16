@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/Users/aamanjun/development/local-setup/dev-configs/nvim'
-let g:netrw_dirhist_5='/Users/aamanjun/development/local-setup/dev-configs'
-let g:netrw_dirhist_4='/Users/aamanjun/development/local-setup/dev-configs/nvim'
-let g:netrw_dirhist_3='/Users/aamanjun/development/local-setup/dev-configs'
-let g:netrw_dirhist_2='/Users/aamanjun/.config/nvim'
-let g:netrw_dirhist_1='/Users/aamanjun/.config'

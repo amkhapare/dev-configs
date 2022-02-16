@@ -23,4 +23,11 @@ vim.o.scrolloff=10
 
 
 
---source ./plugins.vim
+packer = require('plugins')
+packer.startup(function(use)
+	--All configurations go here
+	
+	vim.opt.termguicolors = true
+	vim.o.background = "dark" -- or "light" for light mode
+	vim.cmd([[colorscheme gruvbox]])
+end)

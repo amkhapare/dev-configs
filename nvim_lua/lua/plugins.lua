@@ -18,9 +18,28 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 ]]--
 
+--[[ Plug lua config
+
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 
 
 vim.call('plug#end')
+
+]]--
+
+-- Packer config
+
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function()
+
+
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+
+    -- gruvbox color scheme
+    use "ellisonleao/gruvbox.nvim"
+
+end)

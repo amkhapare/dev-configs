@@ -51,6 +51,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kchmck/vim-coffee-script'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'sindrets/diffview.nvim'
+    Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
@@ -101,8 +102,8 @@ let g:rainbow_active = 1
 
 " au FileType ts,js call rainbow#load()
 
-let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
-let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+" let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+" let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 
 " coc config

@@ -13,12 +13,6 @@
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "javascriptreact"
-  ],
   "python.pythonPath": "/usr/local/opt/python@3.7/bin/python3",
   "python.linting.flake8Enabled": true,
   "python.formatting.provider": "black",
@@ -26,5 +20,6 @@
   "prettier.eslintIntegration": true,
   "git.addGBlameToVirtualText": true,
   "emmet.priority": 91,
-  "snippets.priority": 90
+  "snippets.priority": 90,
+  "diagnostic.checkCurrentLine": true
 }

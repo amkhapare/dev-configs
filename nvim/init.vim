@@ -92,7 +92,7 @@ vnoremap <S-f> <ESC>:Files<CR>
 nnoremap ff <ESC>:Rg 
 
 " rainbow brackets
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
 " let g:rainbow_load_separately = [
 "             \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
 "             \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
@@ -117,7 +117,12 @@ let g:coc_global_extensions = [
     \'coc-go',
     \'coc-git',
     \'coc-angular',
-    \'coc-emmet'
+    \'coc-emmet',
+    \'coc-tslint-plugin',
+    \'coc-eslint',
+    \'coc-prettier',
+    \'coc-html-css-support',
+    \'coc-tailwindcss'
     \]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -191,10 +196,10 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> td <Plug>(coc-definition)
+nmap <silent> ty <Plug>(coc-type-definition)
+nmap <silent> ti <Plug>(coc-implementation)
+nmap <silent> tr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>

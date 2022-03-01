@@ -122,7 +122,8 @@ let g:coc_global_extensions = [
     \'coc-eslint',
     \'coc-prettier',
     \'coc-html-css-support',
-    \'coc-tailwindcss'
+    \'coc-tailwindcss',
+    \'coc-stylelint'
     \]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')

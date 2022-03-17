@@ -52,6 +52,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'sindrets/diffview.nvim'
     Plug 'terryma/vim-multiple-cursors'
+    Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
 

@@ -22,4 +22,19 @@ vim.o.scrolloff=10
 -- vim.o.g:netrw_winsize = 30
 vim.o.termguicolors = true
 vim.o.background = "dark" -- or "light" for light mode
-vim.g.mapleader = " "
+
+vim.g.mapleader = "<Space>"
+vim.g.netrw_preview   = 1
+vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize   = 30
+
+vim.api.nvim_set_keymap('i', 'jj',  '<ESC>', {
+    noremap = true,
+    silent = true
+})
+
+-- gruvbox theme
+vim.opt.termguicolors = true
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
+

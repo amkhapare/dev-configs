@@ -9,7 +9,8 @@ require('telescope').setup{
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
         ["<C-h>"] = "which_key"
       }
-    }
+    },
+    file_ignore_patterns = { "node_modules" }
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:
@@ -29,11 +30,11 @@ require('telescope').setup{
   }
 }
 
-vim.api.nvim_set_keymap('n', '<Leader>ff',  [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], {
+vim.api.nvim_set_keymap('n', '<S-f>',  [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], {
     noremap = true,
     silent = true
 })
-vim.api.nvim_set_keymap('n', '<Leader>gf',  [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], {
+vim.api.nvim_set_keymap('n', '<space>ff',  [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], {
     noremap = true,
     silent = true
 })

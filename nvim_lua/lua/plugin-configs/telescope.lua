@@ -34,7 +34,11 @@ vim.api.nvim_set_keymap('n', '<S-f>',  [[<Cmd>lua require('telescope.builtin').f
     noremap = true,
     silent = true
 })
-vim.api.nvim_set_keymap('n', '<space>ff',  [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], {
+vim.api.nvim_set_keymap('n', 'ff',  [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], {
+    noremap = true,
+    silent = true
+})
+vim.api.nvim_set_keymap('n', '<leader>ff',  [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], {
     noremap = true,
     silent = true
 })

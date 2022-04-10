@@ -23,10 +23,16 @@ vim.o.scrolloff=10
 vim.o.termguicolors = true
 vim.o.background = "dark" -- or "light" for light mode
 
-vim.g.mapleader = "<Space>"
+-- directory explorer
 vim.g.netrw_preview   = 1
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize   = 30
+
+--Remap space as leader key
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 
 vim.api.nvim_set_keymap('i', 'jj',  '<ESC>', {
     noremap = true,

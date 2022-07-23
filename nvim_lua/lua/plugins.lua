@@ -18,7 +18,8 @@ require('packer').startup(function()
     use 'terrortylor/nvim-comment'
     use 'jiangmiao/auto-pairs'
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-    use 'hrsh7th/nvim-compe'
+    -- use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/nvim-cmp'
     use 'kyazdani42/nvim-web-devicons'
     use 'jose-elias-alvarez/null-ls.nvim'
 end)

@@ -43,12 +43,16 @@ local servers = {
     'rust_analyzer',
     'tailwindcss',
     'tsserver',
-    'sumneko_lua'
+    'sumneko_lua',
+    'dockerls',
 }
 
 for _, lsp in pairs(servers) do
+    -- Setup lspconfig.
+    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
     require('lspconfig')[lsp].setup({
         on_attach = on_attach,
+        capabilities = capabilities,
         flags = {
             -- This will be the default in neovim 0.7+
             debounce_text_changes = 150,

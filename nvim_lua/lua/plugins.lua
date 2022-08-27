@@ -21,7 +21,26 @@ require('packer').startup(function()
     use 'terrortylor/nvim-comment'
     use 'jiangmiao/auto-pairs'
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+    -- Code completion
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+
+    -- Snippets
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
+
     use 'kyazdani42/nvim-web-devicons'
     use 'jose-elias-alvarez/null-ls.nvim'
+
+    -- Git decorations
+    use {
+        'lewis6991/gitsigns.nvim',
+        -- tag = 'release' -- To use the latest release
+    }
 end)

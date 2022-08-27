@@ -8,6 +8,7 @@
 4. Install Packer **https://github.com/wbthomason/packer.nvim**
 5. Run **:PackerSync** and **:PackerUpdate**
 6. Run **npm i -g pyright eslint @angular/language-server vscode-langservers-extracted @tailwindcss/language-server typescript typescript-language-server neovim**
+7. Run **brew install lua-language-server**
 6. Run *:checkhealth* and fix diagnostics outputs.
 
 

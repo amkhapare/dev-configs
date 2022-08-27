@@ -10,4 +10,3 @@ require('plugin-configs/compe')
 require('plugin-configs/custom-remaps')
 require('plugin-configs/null-ls')
 require('global-configs')
-

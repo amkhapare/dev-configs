@@ -1,7 +1,10 @@
 local use = require('packer').use
 require('packer').startup(function()
     use 'wbthomason/packer.nvim' -- Package manager
+
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+    use "lukas-reineke/lsp-format.nvim" -- format on save
+
     use 'morhetz/gruvbox'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use {
@@ -13,7 +16,7 @@ require('packer').startup(function()
     }
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'terrortylor/nvim-comment'
     use 'jiangmiao/auto-pairs'

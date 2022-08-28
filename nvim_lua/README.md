@@ -9,6 +9,7 @@
 5. Run **:PackerSync** and **:PackerUpdate**
 6. Run **npm i -g pyright eslint @angular/language-server vscode-langservers-extracted @tailwindcss/language-server typescript typescript-language-server neovim dockerfile-language-server-nodejs**
 7. Run **brew install lua-language-server**
+8. Run **pip install python-lsp-server**
 8. Run **go get github.com/golangci/golangci-lint/cmd/golangci-lint**
 9. Run **go get github.com/nametake/golangci-lint-langserver**
 10. Run *:checkhealth* and fix diagnostics outputs.

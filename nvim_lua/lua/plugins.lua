@@ -27,7 +27,10 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
+    -- use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'hrsh7th/nvim-cmp'
+
+    use 'ray-x/lsp_signature.nvim'
 
     -- Snippets
     use 'hrsh7th/cmp-vsnip'

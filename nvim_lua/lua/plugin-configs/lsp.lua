@@ -7,6 +7,12 @@ local on_attach = function(client, bufnr)
 
     -- enable format on save
     require "lsp-format".on_attach(client)
+    require "lsp_signature".on_attach({
+        bind = true, -- This is mandatory, otherwise border config won't get registered.
+        handler_opts = {
+            border = "rounded"
+        }
+    }, bufnr)
 
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')

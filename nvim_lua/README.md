@@ -1,17 +1,12 @@
 # Tested with
-**USE NODE 14**
-**nvim 0.6.1**
+**USE NODE 16**
+**nvim 0.8.1**
 
 1. Install neovim **brew install neovim**
 2. clone repo.
 3. create symblink **ln -s PATH_TO_YOUR_REPO/nvim ~/.configs/nvim**
 4. Install Packer **https://github.com/wbthomason/packer.nvim**
 5. Run **:PackerSync** and **:PackerUpdate**
-6. Run **npm i -g pyright eslint @angular/language-server vscode-langservers-extracted @tailwindcss/language-server typescript typescript-language-server neovim dockerfile-language-server-nodejs**
-7. Run **brew install lua-language-server**
-8. Run **pip install python-lsp-server**
-8. Run **go get github.com/golangci/golangci-lint/cmd/golangci-lint**
-9. Run **go get github.com/nametake/golangci-lint-langserver**
 10. Run *:checkhealth* and fix diagnostics outputs.
 
 

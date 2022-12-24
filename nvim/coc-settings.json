@@ -21,5 +21,6 @@
   "git.addGBlameToVirtualText": true,
   "emmet.priority": 91,
   "snippets.priority": 90,
-  "diagnostic.checkCurrentLine": true
+  "diagnostic.checkCurrentLine": true,
+  "snippets.ultisnips.pythonPrompt": false
 }

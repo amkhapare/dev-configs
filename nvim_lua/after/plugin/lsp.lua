@@ -85,9 +85,10 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
 end)
 
+lsp.detached = false
+
 lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true,
 })
-

@@ -61,11 +61,12 @@ return require('packer').startup(function(use)
 
     use { "mbbill/undotree" }
 
-    use {
-        "ThePrimeagen/refactoring.nvim",
-        requires = {
-            { "nvim-lua/plenary.nvim" },
-            { "nvim-treesitter/nvim-treesitter" }
-        }
-    }
+    -- use {
+    --     "ThePrimeagen/refactoring.nvim",
+    --     requires = {
+    --         { "nvim-lua/plenary.nvim" },
+    --         { "nvim-treesitter/nvim-treesitter" }
+    --     }
+    -- }
+    use { 'nvim-treesitter/nvim-treesitter-refactor' }
 end)

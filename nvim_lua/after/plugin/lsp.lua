@@ -13,7 +13,8 @@ lsp.ensure_installed({
     'pyright',
     'tailwindcss',
     'dockerls',
-    'pylsp'
+    'pylsp',
+    'yamlls'
 })
 
 -- Fix Undefined global 'vim'

@@ -13,7 +13,6 @@ lsp.ensure_installed({
 	"pyright",
 	"tailwindcss",
 	"dockerls",
-	"pylsp",
 	"yamlls",
 })
 

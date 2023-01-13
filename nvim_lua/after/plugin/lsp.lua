@@ -82,6 +82,21 @@ lsp.on_attach(function(_, bufnr)
 	vim.keymap.set("n", "rn", vim.lsp.buf.rename, opts)
 	vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 	vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, opts)
+
+	vim.api.nvim_create_autocmd("CursorHold", {
+		buffer = bufnr,
+		callback = function()
+			local opts = {
+				focusable = false,
+				close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+				border = "rounded",
+				source = "always",
+				prefix = " ",
+				scope = "cursor",
+			}
+			vim.diagnostic.open_float(nil, opts)
+		end,
+	})
 end)
 
 lsp.detached = false

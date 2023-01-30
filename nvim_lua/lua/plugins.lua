@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+	use("matthewsimo/angular-vim-snippets")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({
@@ -68,5 +69,5 @@ return require("packer").startup(function(use)
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
 	})
-    use { 'kessejones/git-blame-line.nvim' }
+	use({ "kessejones/git-blame-line.nvim" })
 end)

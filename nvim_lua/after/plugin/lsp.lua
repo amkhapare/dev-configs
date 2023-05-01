@@ -5,7 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
 	"tsserver",
 	"eslint",
-	"emmet_ls",
 	"sumneko_lua",
 	"angularls",
 	"cssls",

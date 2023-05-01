@@ -11,7 +11,6 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.black,
 		formatting.prettier,
-		formatting.eslint,
 		diagnostics.eslint,
 		-- completion.spell,
 	},

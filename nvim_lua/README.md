@@ -9,7 +9,7 @@
 4. Install Packer **https://github.com/wbthomason/packer.nvim**
 5. Run **:PackerSync** and **:PackerUpdate**
 6. Run _:checkhealth_ and fix diagnostics outputs.
-7. _brew install imagemagick_ // to preview svg in file search
+7. _brew install chafa_ and _brew install imagemagick_ // to preview svg in file search
 
 #For any error check file
 ** ~/.cache/nvim/packer.nvim.log **

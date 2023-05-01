@@ -47,6 +47,7 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use("nvim-telescope/telescope-media-files.nvim")
 	use("terrortylor/nvim-comment")
 	use("jiangmiao/auto-pairs")
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })

@@ -27,6 +27,12 @@ lsp.configure("lua_ls", {
 	},
 })
 
+-- start angular LSP when any of the 3 files are found
+local util = require('lspconfig.util')
+lsp.configure('angularls', {
+    root_dir = util.root_pattern('nx.json', 'angular.json', 'project.json')
+})
+
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({

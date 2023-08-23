@@ -1,3 +1,3 @@
-require('plugins')
-require('global-configs')
-require('remaps')
+require("plugins")
+require("global-configs")
+require("remaps")

@@ -71,4 +71,13 @@ return require("packer").startup(function(use)
 		},
 	})
 	use({ "kessejones/git-blame-line.nvim" })
+	use({
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		config = function()
+			require("fidget").setup({
+				-- options
+			})
+		end,
+	})
 end)

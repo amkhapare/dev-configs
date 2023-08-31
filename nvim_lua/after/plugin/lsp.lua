@@ -28,9 +28,9 @@ lsp.configure("lua_ls", {
 })
 
 -- start angular LSP when any of the 3 files are found
-local util = require('lspconfig.util')
-lsp.configure('angularls', {
-    root_dir = util.root_pattern('nx.json', 'angular.json', 'project.json')
+local util = require("lspconfig.util")
+lsp.configure("angularls", {
+	root_dir = util.root_pattern("nx.json", "angular.json", "project.json"),
 })
 
 local cmp = require("cmp")
@@ -103,6 +103,13 @@ lsp.on_attach(function(_, bufnr)
 			vim.diagnostic.open_float(nil, opts)
 		end,
 	})
+
+	-- vim.api.nvim_create_autocmd("BufWritePre", {
+	-- 	buffer = bufnr,
+	-- 	callback = function()
+	-- 		vim.lsp.buf.format({ bufnr = bufnr })
+	-- 	end,
+	-- })
 end)
 
 lsp.detached = false

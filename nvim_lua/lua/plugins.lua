@@ -53,7 +53,8 @@ return require("packer").startup(function(use)
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	use("kyazdani42/nvim-web-devicons")
-	use("jose-elias-alvarez/null-ls.nvim")
+	-- use("jose-elias-alvarez/null-ls.nvim")
+	use("lukas-reineke/lsp-format.nvim")
 
 	-- Git decorations
 	use({

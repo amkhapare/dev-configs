@@ -53,3 +53,5 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.jsonls.setup {
     capabilities = capabilities,
 }
+
+lspconfig.custom_elements_ls.setup {}

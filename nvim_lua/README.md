@@ -19,3 +19,6 @@
 
 #For available LSPs check
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
+#Install the below LSPs
+** npm i -g gopls lua_ls angularls bashls cssls cssmodules_ls docker_compose_language_service dockerls emmet_language_server emmet_ls eslint graphql html jsonls custom_elements_ls **

@@ -2,5 +2,5 @@ require("globals")
 
 require("remaps")
 
-require("plugins")
+require("plugins_mgr")
 

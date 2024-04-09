@@ -3,7 +3,8 @@ return {
     tag = "0.1.6",
     dependencies = {
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope-media-files.nvim"
+        "nvim-telescope/telescope-media-files.nvim",
+        "nvim-telescope/telescope-ui-select.nvim"
     },
     config = function()
         local telescope = require("telescope")
@@ -24,18 +25,23 @@ return {
                     -- find command (defaults to `fd`)
                     find_cmd = "rg",
                 },
+                ["ui-select"] = {
+                    require("telescope.themes").get_dropdown {
+                        -- even more opts
+                    }
+                }
             },
         })
         telescope.load_extension("media_files")
 
+        require("telescope").load_extension("ui-select")
 
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<S-f>", builtin.find_files, {})
         vim.keymap.set("n", "ff", builtin.live_grep, {})
         vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
         vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-        vim.keymap.set("n", "<S-m>", [[ <Esc><Cmd>Telescope media_files<CR> ]], { noremap = true, silent = true, expr = false })
+        vim.keymap.set("n", "<S-m>", [[ <Esc><Cmd>Telescope media_files<CR> ]],
+            { noremap = true, silent = true, expr = false })
     end
 }
-
-

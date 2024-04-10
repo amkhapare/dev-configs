@@ -31,9 +31,17 @@ return {
     end
 }, {
     "neovim/nvim-lspconfig",
+    dependencies = { "lukas-reineke/lsp-format.nvim" },
     config = function()
         local lspconfig = require('lspconfig')
         local util = require("lspconfig.util")
+
+        require("lsp-format").setup({})
+
+        local on_attach = function(client)
+            require("lsp-format").on_attach(client)
+        end
+
 
         lspconfig.lua_ls.setup({
             settings = {
@@ -47,12 +55,22 @@ return {
         })
         lspconfig.angularls.setup({
             root_dir = util.root_pattern("nx.json", "angular.json", "project.json"),
+            on_attach = on_attach
         })
         lspconfig.bashls.setup({})
         lspconfig.cssmodules_ls.setup({})
         lspconfig.dockerls.setup({})
         lspconfig.docker_compose_language_service.setup({})
-        lspconfig.eslint.setup({})
+        lspconfig.eslint.setup({
+                on_attach = on_attach
+            -- on_attach = function(client, bufnr)
+            -- vim.api.nvim_create_autocmd("BufWritePre", {
+            -- buffer = bufnr,
+            -- command = "EslintFixAll",
+            -- })
+            -- end,
+
+        })
         lspconfig.emmet_language_server.setup({})
         -- lspconfig.gopls.setup({})
         lspconfig.html.setup({})

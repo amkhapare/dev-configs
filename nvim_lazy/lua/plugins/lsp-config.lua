@@ -18,6 +18,7 @@ return {
                     "docker_compose_language_service",
                     "eslint",
                     "emmet_language_server",
+                    "emmet_ls",
                     -- "gopls",
                     "html",
                     "jsonls",
@@ -33,12 +34,15 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        dependencies = { "lukas-reineke/lsp-format.nvim" },
+        dependencies = { "lukas-reineke/lsp-format.nvim", "hrsh7th/cmp-nvim-lua" },
         config = function()
             local lspconfig = require("lspconfig")
             local util = require("lspconfig.util")
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            lspconfig.intelephense.setup({})
+            lspconfig.intelephense.setup({
+                capabilities = capabilities,
+            })
 
             require("lsp-format").setup({})
 
@@ -47,6 +51,7 @@ return {
             end
 
             lspconfig.lua_ls.setup({
+                capabilities = capabilities,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -56,14 +61,25 @@ return {
                 },
             })
             lspconfig.angularls.setup({
+                capabilities = capabilities,
                 root_dir = util.root_pattern("nx.json", "angular.json", "project.json"),
                 on_attach = on_attach,
             })
-            lspconfig.bashls.setup({})
-            lspconfig.cssmodules_ls.setup({})
-            lspconfig.dockerls.setup({})
-            lspconfig.docker_compose_language_service.setup({})
+            lspconfig.bashls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.cssmodules_ls.setup({
+
+                capabilities = capabilities,
+            })
+            lspconfig.dockerls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.docker_compose_language_service.setup({
+                capabilities = capabilities,
+            })
             lspconfig.eslint.setup({
+                capabilities = capabilities,
                 on_attach = on_attach,
                 -- on_attach = function(client, bufnr)
                 -- vim.api.nvim_create_autocmd("BufWritePre", {
@@ -72,16 +88,38 @@ return {
                 -- })
                 -- end,
             })
-            lspconfig.emmet_language_server.setup({})
+            lspconfig.emmet_language_server.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.emmet_ls.setup({
+                capabilities = capabilities,
+            })
             -- lspconfig.gopls.setup({})
-            lspconfig.html.setup({})
-            lspconfig.jsonls.setup({})
-            lspconfig.tsserver.setup({})
-            lspconfig.marksman.setup({})
-            lspconfig.pyright.setup({})
-            lspconfig.svelte.setup({})
-            lspconfig.tailwindcss.setup({})
-            lspconfig.somesass_ls.setup({})
+            lspconfig.html.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.jsonls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.tsserver.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.marksman.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.pyright.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.svelte.setup({
+
+                capabilities = capabilities,
+            })
+            lspconfig.tailwindcss.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.somesass_ls.setup({
+                capabilities = capabilities,
+            })
 
             -- Global mappings.
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions

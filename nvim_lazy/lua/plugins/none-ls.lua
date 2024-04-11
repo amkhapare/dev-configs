@@ -13,7 +13,10 @@ return {
                 null_ls.builtins.formatting.black,
                 null_ls.builtins.formatting.prettier,
                 require("none-ls.diagnostics.eslint_d"),
+                null_ls.builtins.diagnostics.pylint,
                 null_ls.builtins.completion.spell,
+                null_ls.builtins.completion.luasnip,
+                null_ls.builtins.code_actions.refactoring,
             },
             on_attach = function(client, bufnr)
                 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -24,7 +27,6 @@ return {
                         group = augroup,
                         buffer = bufnr,
                         callback = function()
-                            -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
                             vim.lsp.buf.format({ bufnr = bufnr })
                         end,
                     })
@@ -32,6 +34,5 @@ return {
             end,
         })
 
-        vim.keymap.set("n", "<leader>hf", vim.lsp.buf.format, {})
     end,
 }

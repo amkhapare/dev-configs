@@ -79,7 +79,7 @@ return {
         lspconfig.marksman.setup({})
         lspconfig.pyright.setup({})
         lspconfig.svelte.setup({})
-        lspconfig.tailwindcs.setup({})
+        lspconfig.tailwindcss.setup({})
         lspconfig.somesass_ls.setup({})
 
         -- Global mappings.

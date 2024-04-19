@@ -45,6 +45,7 @@ return {
                 }, {
                     { name = "buffer" },
                 }),
+                -- view = "widmenu",
             })
 
             -- Set configuration for specific filetype.
@@ -66,7 +67,7 @@ return {
 
             -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
             cmp.setup.cmdline(":", {
-                mapping = cmp.mapping.preset.cmdline(),
+                -- mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources({
                     { name = "path" },
                 }, {
@@ -75,6 +76,7 @@ return {
                 matching = { disallow_symbol_nonprefix_matching = false },
             })
 
+            -- vim.keymap.set("c", "<tab>", "<C-z>", { silent = false }) -- to fix autocomplete not working
         end,
     },
 }

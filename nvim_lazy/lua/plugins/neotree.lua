@@ -24,7 +24,7 @@ return {
         },
     },
     config = function()
-        vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>", {})
+        vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", {})
         vim.keymap.set("n", "<leader>r", ":Neotree reveal<CR>", {})
     end,
 }

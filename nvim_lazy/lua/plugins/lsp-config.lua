@@ -28,6 +28,7 @@ return {
                     "svelte",
                     "tailwindcss",
                     "somesass_ls",
+                    "rust_analyzer",
                 },
             })
         end,
@@ -118,6 +119,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.somesass_ls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.rust_analyser.setup({
                 capabilities = capabilities,
             })
 

@@ -3,3 +3,5 @@ nvim_lua/plugin
 .DS_Store
 
 nvim_lazy/spell
+
+tmux/plugins

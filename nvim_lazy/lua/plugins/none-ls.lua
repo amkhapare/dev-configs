@@ -14,7 +14,7 @@ return {
                 null_ls.builtins.formatting.prettier,
                 require("none-ls.diagnostics.eslint_d"),
                 null_ls.builtins.diagnostics.pylint,
-                null_ls.builtins.completion.luasnip,
+                -- null_ls.builtins.completion.luasnip,
                 null_ls.builtins.code_actions.refactoring,
                 -- null_ls.builtins.completion.spell,
             },

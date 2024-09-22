@@ -9,21 +9,21 @@ return {
     config = function()
         local telescope = require("telescope")
         telescope.setup({
-            vimgrep_arguments = {
-                hidden = true,
-                ignore = false,
-            },
+            -- vimgrep_arguments = {
+            --     hidden = true,
+            --     ignore = false,
+            -- },
             pickers = {
                 find_cmd = {
-                    hidden = true,
-                    no_ignore = true,
+                    -- hidden = true,
+                    -- no_ignore = true,
                 },
                 find_files = {
-                    hidden = true,
-                    no_ignore = true,
+                    -- hidden = true,
+                    -- no_ignore = true,
                 },
                 live_grep = {
-                    hidden = true,
+                    -- hidden = true,
                 },
             },
             extensions = {

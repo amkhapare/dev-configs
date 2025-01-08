@@ -4,8 +4,9 @@
 alias bastion="ssh stage-mpop-bastion"
 
 alias thin-312="ssh root@312.thin.env -p 222 -L 8442:localhost:443"
-alias my-env="ssh root@262.thin.env -p 222 -L 8442:localhost:443"
-alias my-tester="ssh root@262.thin.env -p 22"
+alias thin-11="ssh root@11.thin.env -p 222 -L 8442:localhost:443"
+alias my-env="ssh root@352.thin.env -p 222 -L 8442:localhost:443"
+alias my-tester="ssh root@352.thin.env -p 22"
 
 alias skadoosh="ssh root@172.105.52.77"
 
@@ -72,3 +73,7 @@ alias deploy-dpop='helm upgrade --install dpop-lke-aamanjun . \
 
 #k9s
 alias beta='k9s --kubeconfig ~/.kube/beta_mpop_config'
+
+#mgmt-apps docker commands
+alias mgmt-test-build="docker compose -f ./docker-compose-ci-test.yml up --build"
+alias mgmt-test="docker compose -f ./docker-compose-ci-test.yml up"

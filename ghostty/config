@@ -1,0 +1,3 @@
+theme = dark:catppuccin-frappe,light:catppuccin-latte
+keybind = ctrl+`=toggle_quick_terminal
+

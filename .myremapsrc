@@ -87,3 +87,6 @@ alias mgmt-test="docker compose -f ./docker-compose-ci-test.yml up"
 
 #My VMs
 alias my-ubuntu="ssh blr-lviw4.bangalore.corp.akamai.com"
+
+# TMUX
+alias pde-gc="bash ~/development/local-dev/dev-configs/tmux/scripts/gc.sh"

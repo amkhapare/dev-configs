@@ -3,10 +3,8 @@
 
 alias bastion="ssh stage-mpop-bastion"
 
-alias thin-312="ssh root@312.thin.env -p 222 -L 8442:localhost:443"
-alias thin-11="ssh root@11.thin.env -p 222 -L 8442:localhost:443"
-alias my-env="ssh root@352.thin.env -p 222 -L 8442:localhost:443"
-alias my-tester="ssh root@352.thin.env -p 22"
+alias my-env="ssh root@183.thin.env -p 222 -L 8442:localhost:443"
+alias my-tester="ssh root@183.thin.env -p 22"
 
 alias skadoosh="ssh root@172.105.52.77"
 
@@ -34,12 +32,13 @@ alias copy-ztui="cp -r ~/development/node12/zt-ui/apps ~/development/ztna/zt-ui;
 
 alias start-spireadmin="DEV=true go run ./cmd/spire-gql -config release/spire-gql/conf/spiregql.sample.yml"
 
+alias mpoplke="cd ~/development/eaa-lke-mpop"
 alias mpop='k9s --kubeconfig ~/.kube/aamanjun_config'
 alias mpop-plan="terraform plan -var-file ../env/aamanjun-secrets.tfvars -var-file ../env/aamanjun-terraform.tfvars"
 alias mpop-apply="terraform apply -var-file ../env/aamanjun-secrets.tfvars -var-file ../env/aamanjun-terraform.tfvars" 
 
 alias kd="kubectl --namespace=aamanjun-dev-dpop"
-alias dpop='k9s --kubeconfig ~/.kube/dpop-lke-aamanjun-kubeconfig.yaml'
+alias dpop='k9s --kubeconfig ~/.kube/aamanjun-dev-dpop-kubeconfig.yaml'
 alias dpop-plan="terraform plan -var-file ../../dpop-vars/terraform.tfvars -var \"dpop_values_file=../../dpop-vars/dpop-values.yaml\" -var \"dpop_secrets_file=../../dpop-vars/dpop-secrets.yaml\" -var \"dpop_manifest_file=../../dpop-vars/dpop-manifest.yaml\""
 alias dpop-apply="terraform apply -var-file ../../dpop-vars/terraform.tfvars -var \"dpop_values_file=../../dpop-vars/dpop-values.yaml\" -var \"dpop_secrets_file=../../dpop-vars/dpop-secrets.yaml\" -var \"dpop_manifest_file=../../dpop-vars/dpop-manifest.yaml\""
 
@@ -61,8 +60,16 @@ alias ngzt="cd /Users/aamanjun/development/ng-zt-ui"
 alias mgmt="cd /Users/aamanjun/development/ztna/mgmt-apps"
 
 #LKE DPOP
-alias mydpop-kubeconf='export KUBECONFIG=~/.kube/dpop-lke-aamanjun-kubeconfig.yaml'
-alias deploy-dpop='helm upgrade --install dpop-lke-aamanjun . \
+alias mydpop-kubeconf='export KUBECONFIG=~/.kube/aamanjun-dev-dpop-kubeconfig.yaml'
+# alias deploy-dpop='helm upgrade --install dpop-lke-aamanjun . \
+#     --version=1.0.0 \
+#     --timeout=900s \
+#     --namespace=dpop-lke-aamanjun \
+#     --values /Users/aamanjun/development/eaa-lke-dpop/dpop-vars/dpop-manifest.yaml \
+#     --values /Users/aamanjun/development/eaa-lke-dpop/dpop-vars/dpop-values.yaml \
+#     --values /Users/aamanjun/development/eaa-lke-dpop/dpop-vars/dpop-secrets.yaml \
+#     --set lke-cloud-firewall.loadBalancers="{tags/DPOP-LKE-AAMANJUN}" --debug;'
+alias deploy-dpop='helm upgrade --install linode-chennai . \
     --version=1.0.0 \
     --timeout=900s \
     --namespace=dpop-lke-aamanjun \
@@ -77,3 +84,6 @@ alias beta='k9s --kubeconfig ~/.kube/beta_mpop_config'
 #mgmt-apps docker commands
 alias mgmt-test-build="docker compose -f ./docker-compose-ci-test.yml up --build"
 alias mgmt-test="docker compose -f ./docker-compose-ci-test.yml up"
+
+#My VMs
+alias my-ubuntu="ssh blr-lviw4.bangalore.corp.akamai.com"

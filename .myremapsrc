@@ -90,3 +90,7 @@ alias my-ubuntu="ssh blr-lviw4.bangalore.corp.akamai.com"
 
 # TMUX
 alias pde-gc="bash ~/development/local-dev/dev-configs/tmux/scripts/gc.sh"
+alias pde-lke="bash ~/development/local-dev/dev-configs/tmux/scripts/lke.sh"
+alias pde-cm="bash ~/development/local-dev/dev-configs/tmux/scripts/cm.sh"
+alias pde-fm="bash ~/development/local-dev/dev-configs/tmux/scripts/fm.sh"
+alias pde-mgmt="bash ~/development/local-dev/dev-configs/tmux/scripts/mgmt.sh"

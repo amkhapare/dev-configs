@@ -1,10 +1,10 @@
 #!/bin/bash
 
-SESSION="gc"
-SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
+source $HOME/development/local-dev/dev-configs/tmux/scripts/util.sh
 
-if ["$SESSIONEXISTS" = ""]
-then
+SESSION="gc"
+
+if session_exists $SESSION; then
     ### GC Session ###
     tmux new-session -d -s $SESSION
     # Create thin env window
@@ -24,6 +24,9 @@ then
     tmux new-window -n "GCM"
     tmux select-window -t 4
     tmux send-keys "gcm; nvim ." C-m
+    # Attach!
+    tmux attach-session -t $SESSION:1
+else
+    echo "Active gc session exists..."
 fi
 
-tmux attach-session -t $SESSION:1

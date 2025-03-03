@@ -5,3 +5,4 @@ nvim_lua/plugin
 nvim_lazy/spell
 
 tmux/plugins
+.myremapsrc

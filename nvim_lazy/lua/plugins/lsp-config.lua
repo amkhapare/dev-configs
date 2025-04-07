@@ -32,6 +32,7 @@ return {
                     "somesass_ls",
                     -- "rust_analyzer",
                     "terraformls",
+                    "jdtls",
                 },
             })
         end,
@@ -128,6 +129,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.somesass_ls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.jdtls.setup({
                 capabilities = capabilities,
             })
             -- lspconfig.rust_analyser.setup({

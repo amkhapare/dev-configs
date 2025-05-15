@@ -14,7 +14,7 @@ if session_exists $SESSION; then
     # Dev server
     tmux new-window -n "DEV_SERVER"
     tmux select-window -t 2
-    tmux send-keys "leo; env shell openjdk64-17.0.14; bash install_leo.sh" C-m
+    tmux send-keys "leo; env shell system; bash install_leo.sh" C-m
     tmux attach-session -t $SESSION:1
 else
     echo "Active $SESSION session exists..."

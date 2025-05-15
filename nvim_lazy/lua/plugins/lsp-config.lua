@@ -22,7 +22,8 @@ return {
                     -- "gopls",
                     "html",
                     "jsonls",
-                    "tsserver",
+                    -- "tsserver",
+                    "ts_ls",
                     "marksman",
                     "pyright",
                     "ruff",
@@ -30,7 +31,7 @@ return {
                     "tailwindcss",
                     "cssls",
                     "somesass_ls",
-                    -- "rust_analyzer",
+                    "rust_analyzer",
                     "terraformls",
                     "jdtls",
                 },
@@ -106,7 +107,7 @@ return {
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.tsserver.setup({
+            lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
             lspconfig.marksman.setup({
@@ -119,7 +120,6 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.svelte.setup({
-
                 capabilities = capabilities,
             })
             lspconfig.tailwindcss.setup({
@@ -134,9 +134,19 @@ return {
             lspconfig.jdtls.setup({
                 capabilities = capabilities,
             })
-            -- lspconfig.rust_analyser.setup({
-            -- 	capabilities = capabilities,
-            -- })
+            lspconfig.rust_analyser.setup({
+                capabilities = capabilities,
+                on_attach = on_attach,
+                filetypes = { "rust" },
+                -- root_dir = util.root_pattern("Cargo.toml"),
+                settings = {
+                    ["rust_analyser"] = {
+                        cargo = {
+                            allFeatures = true,
+                        },
+                    },
+                },
+            })
 
             -- Global mappings.
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions

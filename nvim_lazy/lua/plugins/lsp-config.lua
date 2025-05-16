@@ -134,13 +134,13 @@ return {
             lspconfig.jdtls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.rust_analyser.setup({
+            lspconfig.rust_analyzer.setup({
                 capabilities = capabilities,
                 on_attach = on_attach,
                 filetypes = { "rust" },
                 -- root_dir = util.root_pattern("Cargo.toml"),
                 settings = {
-                    ["rust_analyser"] = {
+                    ["rust_analyzer"] = {
                         cargo = {
                             allFeatures = true,
                         },

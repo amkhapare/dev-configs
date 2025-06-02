@@ -14,7 +14,7 @@ if session_exists $SESSION; then
     # Dev server
     tmux new-window -n "DEV_SERVER"
     tmux select-window -t 2
-    tmux send-keys "cm; npm run serve:callisto" C-m
+    tmux send-keys "cm; npm run serve:callisto"
     tmux attach-session -t $SESSION:1
 else
     echo "Active $SESSION session exists..."

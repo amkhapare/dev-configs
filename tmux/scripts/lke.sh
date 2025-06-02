@@ -15,6 +15,11 @@ if session_exists $SESSION; then
     tmux new-window -n "DPOP"
     tmux select-window -t 2
     tmux send-keys "dpop" C-m
+    # Start Editor
+    tmux new-window -n "PDE"
+    tmux select-window -t 3
+    tmux send-keys "mgmt" C-m
+    # Attach
     tmux attach-session -t $SESSION:1
 else
     echo "Active $SESSION session exists..."

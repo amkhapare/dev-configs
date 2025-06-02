@@ -11,8 +11,10 @@ if session_exists $SESSION; then
     NAME="REPO"
     tmux rename-window -t 1 $NAME
     tmux send-keys -t $NAME "mgmt; nvim ." C-m
-    # TODO - START DOCKER -
-    tmux attach-session -t $SESSION:1
+    # Start dev server
+    tmux new-window -n "LKE-MPOP"
+    tmux select-window -t 2
+    tmux send-keys "mpop" C-m
 else
     echo "Active $SESSION session exists..."
 fi

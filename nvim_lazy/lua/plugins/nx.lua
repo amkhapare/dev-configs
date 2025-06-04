@@ -15,7 +15,7 @@ return {
     --         -- see nx.m.command-runners for more details
     --         command_runner = require("nx.command-runners").terminal_cmd(),
     --         -- Form rendering capabilities,
-    --         -- see nx.m.form-renderers for more detials
+    --         -- see nx.m.form-renderers for more details
     --         form_renderer = require("nx.form-renderers").telescope(),
     --
     --         -- Whether or not to load nx configuration,

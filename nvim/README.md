@@ -8,6 +8,9 @@
 3. create symblink **ln -s PATH_TO_YOUR_REPO/nvim ~/.configs/nvim**
 6. Run _:checkhealth_ and fix diagnostics outputs.
 
+#Lazy Plugins menu
+** :Lazy **
+
 #For any error check file
 ** ~/.cache/nvim/packer.nvim.log **
 

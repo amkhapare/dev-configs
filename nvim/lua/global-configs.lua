@@ -1,4 +1,4 @@
-vim.o.mouse = ni
+-- vim.o.mouse = false
 --set noerrorbells
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
@@ -46,4 +46,3 @@ vim.api.nvim_set_keymap("i", "jj", "<ESC>", {
 	noremap = true,
 	silent = true,
 })
-

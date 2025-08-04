@@ -15,6 +15,11 @@ if session_exists $SESSION; then
     tmux new-window -n "LKE-MPOP"
     tmux select-window -t 2
     tmux send-keys "mpop" C-m
+    # SSH to engg VM
+    tmux new-window -n "DEV-VM"
+    tmux select-window -t 3
+    tmux send-keys "my-ubuntu" C-m
+    tmux attach-session -t $SESSION:1
 else
     echo "Active $SESSION session exists..."
 fi

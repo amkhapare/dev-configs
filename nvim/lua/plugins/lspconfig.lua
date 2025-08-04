@@ -209,6 +209,7 @@ return   {
             dockerls = {},
             docker_compose_language_service = {},
             eslint = {},
+            prettier = {},
             emmet_language_server = {},
             emmet_ls = {},
             -- gopls = {},

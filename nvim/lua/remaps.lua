@@ -1,5 +1,6 @@
 vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "cp", ":CopilotChatToggle<CR>")
 
 -- Remaps for the refactoring operations currently offered by the plugin
 -- vim.api.nvim_set_keymap(

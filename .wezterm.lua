@@ -11,7 +11,7 @@ config.color_scheme = "tokyonight-night"
 
 -- brew install font-fira-code-nerd-font
 config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = 13
+config.font_size = 12
 
 config.enable_tab_bar = false
 

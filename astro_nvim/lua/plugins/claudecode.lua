@@ -6,6 +6,16 @@ return {
       split_width_percentage = 0.50,
     },
   },
+  config = function(_, opts)
+    vim.api.nvim_set_hl(0, "ClaudeCodeBg", { bg = "#0d0e1a" })
+    vim.api.nvim_create_autocmd("TermOpen", {
+      pattern = "*claude*",
+      callback = function()
+        vim.wo.winhl = "Normal:ClaudeCodeBg,NormalNC:ClaudeCodeBg"
+      end,
+    })
+    require("claudecode").setup(opts)
+  end,
   cmd = {
     "ClaudeCode", "ClaudeCodeFocus", "ClaudeCodeSelectModel",
     "ClaudeCodeAdd", "ClaudeCodeSend", "ClaudeCodeTreeAdd",

@@ -7,13 +7,8 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 },
       autopairs = true,
       cmp = true,
-      diagnostics = { virtual_text = true, virtual_lines = false },
       highlighturl = true,
       notifications = true,
-    },
-    diagnostics = {
-      virtual_text = true,
-      underline = true,
     },
     options = {
       opt = {
@@ -35,6 +30,20 @@ return {
             )
           end,
           desc = "Close buffer from tabline",
+        },
+        ["gl"] = { function() vim.diagnostic.open_float() end, desc = "Show line diagnostics" },
+      },
+    },
+    autocmds = {
+      diagnostic_float_config = {
+        {
+          event = "VimEnter",
+          desc = "Configure diagnostic float",
+          callback = function()
+            vim.diagnostic.config({
+              float = { border = "rounded", source = true },
+            })
+          end,
         },
       },
     },

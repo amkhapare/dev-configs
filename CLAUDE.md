@@ -50,8 +50,13 @@ The expected symlink targets are:
 
 The old `README.md` references `nvim_lsp` — that is outdated; the correct target is `astro_nvim`.
 
+## Active setup — scope of changes
+
+**Only `astro_nvim/` and `tmux/` are in active use.** All other configs (`nvim/`, `ghostty/`, `zsh/`, `.wezterm.lua`) are present for reference but not actively maintained. Any request to change editor, terminal, or shell behaviour should be applied exclusively to `astro_nvim/` and/or `tmux/` — never to the other directories unless the user explicitly names them.
+
 ## What not to do
 
 - Don't add comments explaining what Lua/tmux config options do — the config files should stay clean.
 - Don't create new files unless adding a genuinely new tool config or tmux session script.
 - Don't modify files inside `tmux/plugins/` — those are third-party submodules.
+- Don't touch `nvim/`, `ghostty/`, `zsh/`, or `.wezterm.lua` for any change request — they are out of scope.

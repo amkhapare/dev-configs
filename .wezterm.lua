@@ -15,6 +15,15 @@ config.font_size = 12
 
 config.enable_tab_bar = false
 
+config.keys = {
+    {
+        key = "Enter",
+        mods = "SHIFT",
+        action = wezterm.action.SendString("\x1b[200~\n\x1b[201~"),
+    },
+}
+
+
 local mux = wezterm.mux
 
 wezterm.on("gui-startup", function(cmd)

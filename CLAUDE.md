@@ -10,7 +10,7 @@ nvim/                # Legacy Neovim config — kept for reference, not active
 tmux/
   tmux.conf          # Main tmux config
   scripts/           # Bash scripts that create project tmux sessions
-  plugins/           # TPM plugins as git submodules
+  plugins/           # TPM-installed plugins (gitignored)
 ghostty/config       # Ghostty terminal settings
 zsh/.zshrc           # ZSH settings
 .wezterm.lua         # WezTerm settings
@@ -26,8 +26,8 @@ zsh/.zshrc           # ZSH settings
 ## Working with AstroNvim config
 
 - Plugin files live in `astro_nvim/lua/plugins/`. Each file returns a lazy.nvim spec table.
-- `community.lua` imports AstroCommunity packs — currently `pack.lua` (Lua) and `recipes.ai`.
-- `opencode.lua` wires the `opencode.nvim` AI plugin with keymaps (`<C-a>`, `<C-x>`, `<C-.>`, `go`/`goo`).
+- `community.lua` lists AstroCommunity imports (`pack.lua`, `recipes.ai`) but is currently disabled by its guard line, so none of them load.
+- `claudecode.lua` wires the `claudecode.nvim` AI plugin with `<leader>a…` keymaps.
 - To add a new plugin: create a new file in `astro_nvim/lua/plugins/` returning a lazy spec. No registration needed — AstroNvim auto-discovers files in that directory.
 - `lazy-lock.json` tracks exact plugin versions. Update it intentionally with `:Lazy update` inside Neovim.
 
@@ -58,5 +58,5 @@ The old `README.md` references `nvim_lsp` — that is outdated; the correct targ
 
 - Don't add comments explaining what Lua/tmux config options do — the config files should stay clean.
 - Don't create new files unless adding a genuinely new tool config or tmux session script.
-- Don't modify files inside `tmux/plugins/` — those are third-party submodules.
+- Don't modify files inside `tmux/plugins/` — those are third-party plugins installed by TPM and gitignored.
 - Don't touch `nvim/`, `ghostty/`, `zsh/`, or `.wezterm.lua` for any change request — they are out of scope.
